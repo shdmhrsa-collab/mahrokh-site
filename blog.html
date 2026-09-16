@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>وبلاگ ماه‌رخ | ماه‌رخ</title>
+<meta name="description" content="مقالات مزون ماه‌رخ درباره پوشاک ایرانی، راهنمای خرید و هنر دست‌دوز."/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-card">
+  <div class="bg-primary text-on-primary py-space-2xs px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between font-label-sm text-label-sm">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-sm">local_shipping</span>
+        <span>ارسال رایگان برای خریدهای بالای ۱,۵۰۰,۰۰۰ تومان به سراسر ایران • بسته‌بندی نفیس هدیه</span>
+      </div>
+      <div class="hidden md:flex items-center gap-space-sm">
+        <span>پشتیبانی اختصاصی مزون:</span>
+        <span class="font-semibold tracking-wider" dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span>
+        <span class="material-symbols-outlined text-sm">support_agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-sm">
+      <img alt="ماه‌رخ" class="w-9 h-9" src="assets/images/logo-mahrokh.svg"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">ماه‌رخ</span>
+        <span class="font-label-sm text-label-sm text-tertiary">پوشاک زنانه با الهام از ایران</span>
+      </div>
+    </a>
+
+    <form class="hidden lg:flex flex-1 max-w-2xl mx-space-lg" action="shop.html" method="get">
+      <div class="w-full flex items-center bg-surface-container-lowest rounded-xl shadow-card px-space-sm py-space-xs">
+        <span class="material-symbols-outlined text-outline ml-space-xs">search</span>
+        <input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder-outline" name="q" placeholder="جست‌وجوی محصول، دسته‌بندی یا برند..." type="text"/>
+        <button type="submit" class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-space-2xs rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">جست‌وجو</button>
+      </div>
+    </form>
+
+    <div class="flex items-center gap-space-xs md:gap-space-sm">
+      <a class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-lg transition-colors font-label-md text-label-md" href="account/dashboard.html">
+        <span class="material-symbols-outlined text-lg">person</span>
+        <span>حساب من</span>
+      </a>
+      <a class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors rounded-lg" href="account/wishlist.html">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+        <span id="wishlist-count" class="absolute top-0 left-0 w-4 h-4 bg-tertiary text-on-tertiary rounded-full font-label-sm text-[10px] leading-4 text-center">۰</span>
+      </a>
+      <a class="relative flex items-center gap-space-2xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs rounded-lg transition-colors shadow-card font-label-md text-label-md" href="cart.html">
+        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+        <span class="hidden sm:inline">سبد خرید</span>
+        <span id="cart-count" class="bg-on-primary text-primary rounded-full w-5 h-5 text-[11px] leading-5 text-center font-bold">۰</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full px-margin-mobile md:px-margin-desktop overflow-x-auto scrollbar-none border-t border-outline-variant/40">
+    <nav id="main-nav" class="max-w-[1440px] mx-auto flex items-center gap-space-md py-space-xs whitespace-nowrap min-w-max">
+      <a data-page="index.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="index.html">خانه</a>
+      <a data-page="shop.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="shop.html">فروشگاه</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">مانتو و بارانی</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">پوشاک سنتی و دست‌دوز</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">شال و روسری ابریشمی</a>
+      <a data-page="blog.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="blog.html">وبلاگ</a>
+      <a data-page="vendors.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="vendors.html">فروشندگان</a>
+      <a data-page="sale.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-error hover:text-error" href="sale.html">حراج ویژه</a>
+      <a data-page="about.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="about.html">داستان ماه‌رخ</a>
+      <a data-page="contact.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="contact.html">تماس با ما</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-[7.5rem] md:pt-32 bg-surface min-h-screen">
+<div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-lg">
+  <nav class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-2xs mb-space-md">
+    <a href="index.html" class="hover:text-primary">خانه</a><span>/</span><span class="text-on-surface">وبلاگ ماه‌رخ</span>
+  </nav>
+  <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-space-2xs">وبلاگ ماه‌رخ</h1>
+  <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">روایت‌هایی از هنر پوشاک ایرانی، راهنمای خرید و پشت‌صحنه اتلیه ماه‌رخ</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="ابریشم ایرانی؛ روایتی هزارساله از جاده ابریشم تا مزون امروز"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">میراث و فرهنگ</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">ابریشم ایرانی؛ روایتی هزارساله از جاده ابریشم تا مزون امروز</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۱۲ شهریور ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۶ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="راهنمای کامل انتخاب سایز مانتو؛ چطور بدون پرو، سایز درست بخریم؟"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">راهنمای خرید</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">راهنمای کامل انتخاب سایز مانتو؛ چطور بدون پرو، سایز درست بخریم؟</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۳۰ مرداد ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۴ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="نقش اسلیمی و ترنج؛ زبان بصری هنر ایرانی روی پارچه"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">طراحی و الهام</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">نقش اسلیمی و ترنج؛ زبان بصری هنر ایرانی روی پارچه</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۱۸ مرداد ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۵ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="نگهداری از پوشاک ابریشمی؛ ۷ نکته برای ماندگاری بیشتر لباس"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">راهنمای نگهداری</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">نگهداری از پوشاک ابریشمی؛ ۷ نکته برای ماندگاری بیشتر لباس</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۲ مرداد ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۳ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="پشت‌صحنه کالکشن نوروز؛ از طرح روی کاغذ تا دوخت نهایی"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">داستان مزون</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">پشت‌صحنه کالکشن نوروز؛ از طرح روی کاغذ تا دوخت نهایی</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۲۰ تیر ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۷ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+<a href="blog-single.html" class="group block bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+  <div class="aspect-[16/10] overflow-hidden"><img src="assets/images/placeholder-wide.svg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="کپسول‌وارور ایرانی؛ چطور با ۱۰ قطعه، ماه‌ها استایل بسازیم"/></div>
+  <div class="p-space-md space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">راهنمای استایل</span>
+    <h3 class="font-title-lg text-title-lg text-on-surface leading-snug group-hover:text-primary transition-colors">کپسول‌وارور ایرانی؛ چطور با ۱۰ قطعه، ماه‌ها استایل بسازیم</h3>
+    <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant pt-space-2xs">
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>۵ تیر ۱۴۰۳</span>
+      <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>۵ دقیقه مطالعه</span>
+    </div>
+  </div>
+</a>
+  </div>
+</div>
+</main>
+<footer class="w-full bg-surface-container-low pt-space-3xl pb-space-xl mt-space-3xl">
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
+    <div class="space-y-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="font-headline-md text-headline-md text-primary">مزون ماه‌رخ</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">ماه‌رخ بازتابی از پیوند اصالت هنر ایرانی و زیبایی‌شناسی معاصر است. طراحی دست‌دوز، منسوجات نفیس ابریشم و الگوهای فاخر معماری، هویتی بی‌بدیل به هر اثر می‌بخشند.</p>
+      <div class="flex items-center gap-space-sm text-primary">
+        <span class="material-symbols-outlined">verified</span>
+        <span class="font-label-md text-label-md">گواهی اصالت دوخت و الیاف طبیعی</span>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">خدمات مشتریان</h4>
+      <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">راهنمای خرید و ارسال</a></li>
+        <li class="hover:text-primary transition-colors"><a href="faq.html">پرسش‌های متداول</a></li>
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">شرایط تعویض و بازگشت کالا</a></li>
+        <li class="hover:text-primary transition-colors"><a href="account/orders.html">پیگیری سفارش و مرسوله</a></li>
+        <li class="hover:text-primary transition-colors"><a href="contact.html">خدمات شخصی‌دوزی ویژه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="size-guide.html">راهنمای سایز</a></li>
+        <li class="hover:text-primary transition-colors"><a href="order-tracking.html">رهگیری سفارش (بدون ورود)</a></li>
+        <li class="hover:text-primary transition-colors"><a href="gift-cards.html">کارت هدیه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="brands.html">برندهای همکار</a></li>
+        <li class="hover:text-primary transition-colors"><a href="become-vendor.html">فروشنده ماه‌رخ شوید</a></li>
+      </ul>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">شوروم و ارتباط مستقیم</h4>
+      <div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+        <div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary mt-1">location_on</span><span>تهران، زعفرانیه، خیابان آصف، پلاک ۴۴، عمارت ماه‌رخ</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">call</span><span dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">mail</span><span>atelier@mahrokh.ir</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">schedule</span><span>شنبه تا پنجشنبه: ۱۰:۰۰ الی ۲۱:۰۰ (با هماهنگی قبلی)</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm pt-space-xs">
+        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        <a href="#" aria-label="تلگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">send</span></a>
+        <a href="#" aria-label="واتس‌اپ" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">chat</span></a>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">باشگاه مشتریان ماه‌رخ</h4>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">عضویت در خبرنامه باشگاه مشتریان ماه‌رخ جهت دریافت تخفیف‌های ویژه و دسترسی اختصاصی به مجموعه‌های نو</p>
+      <form class="flex flex-col gap-space-xs" data-api-form="submissions" data-reset="true"><input type="hidden" name="type" value="newsletter">
+        <input name="contact" required class="w-full bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none" placeholder="شماره تماس یا ایمیل شما..." type="email"/>
+        <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-space-xs rounded-lg transition-colors shadow-card">عضویت در حلقه اختصاصی</button>
+      <div data-form-feedback class="hidden text-secondary text-sm rounded-lg px-3 py-2"></div></form>
+      <div class="flex items-center gap-space-md pt-space-xs">
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">verified_user</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-tertiary text-2xl">workspace_premium</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">lock</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop mt-space-2xl pt-space-md border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant text-center md:text-right">
+    <span>تمامی حقوق مادی و معنوی برای مزون پوشاک ماه‌رخ محفوظ است © ۱۴۰۳</span>
+    <div class="flex items-center gap-space-md">
+      <a class="hover:text-primary transition-colors" href="login.html">ورود</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="register.html">ثبت‌نام</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="privacy.html">حریم خصوصی</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="terms.html">قوانین و مقررات</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/currency-formatter.js"></script>
+<script src="js/core/cart-service.js"></script>
+<script src="js/core/wishlist-service.js"></script>
+<script src="js/core/permission-service.js"></script>
+<script src="js/ui/nav-highlighter.js"></script>
+<script src="js/ui/accordion.js"></script>
+<script src="js/ui/tabs.js"></script>
+<script src="js/ui/quantity-stepper.js"></script>
+<script src="js/ui/form-handler.js"></script>
+<script src="js/ui/badge-updater.js"></script>
+<script src="js/ui/product-actions.js"></script>
+<script src="js/ui/cart-page-renderer.js"></script>
+<script src="js/ui/permission-gate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth-ui.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/live-products.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تسویه‌حساب | ماه‌رخ</title>
+<meta name="description" content="تکمیل خرید، ثبت نشانی ارسال و انتخاب روش پرداخت."/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-card">
+  <div class="bg-primary text-on-primary py-space-2xs px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between font-label-sm text-label-sm">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-sm">local_shipping</span>
+        <span>ارسال رایگان برای خریدهای بالای ۱,۵۰۰,۰۰۰ تومان به سراسر ایران • بسته‌بندی نفیس هدیه</span>
+      </div>
+      <div class="hidden md:flex items-center gap-space-sm">
+        <span>پشتیبانی اختصاصی مزون:</span>
+        <span class="font-semibold tracking-wider" dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span>
+        <span class="material-symbols-outlined text-sm">support_agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-sm">
+      <img alt="ماه‌رخ" class="w-9 h-9" src="assets/images/logo-mahrokh.svg"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">ماه‌رخ</span>
+        <span class="font-label-sm text-label-sm text-tertiary">پوشاک زنانه با الهام از ایران</span>
+      </div>
+    </a>
+
+    <form class="hidden lg:flex flex-1 max-w-2xl mx-space-lg" action="shop.html" method="get">
+      <div class="w-full flex items-center bg-surface-container-lowest rounded-xl shadow-card px-space-sm py-space-xs">
+        <span class="material-symbols-outlined text-outline ml-space-xs">search</span>
+        <input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder-outline" name="q" placeholder="جست‌وجوی محصول، دسته‌بندی یا برند..." type="text"/>
+        <button type="submit" class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-space-2xs rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">جست‌وجو</button>
+      </div>
+    </form>
+
+    <div class="flex items-center gap-space-xs md:gap-space-sm">
+      <a class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-lg transition-colors font-label-md text-label-md" href="account/dashboard.html">
+        <span class="material-symbols-outlined text-lg">person</span>
+        <span>حساب من</span>
+      </a>
+      <a class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors rounded-lg" href="account/wishlist.html">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+        <span id="wishlist-count" class="absolute top-0 left-0 w-4 h-4 bg-tertiary text-on-tertiary rounded-full font-label-sm text-[10px] leading-4 text-center">۰</span>
+      </a>
+      <a class="relative flex items-center gap-space-2xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs rounded-lg transition-colors shadow-card font-label-md text-label-md" href="cart.html">
+        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+        <span class="hidden sm:inline">سبد خرید</span>
+        <span id="cart-count" class="bg-on-primary text-primary rounded-full w-5 h-5 text-[11px] leading-5 text-center font-bold">۰</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full px-margin-mobile md:px-margin-desktop overflow-x-auto scrollbar-none border-t border-outline-variant/40">
+    <nav id="main-nav" class="max-w-[1440px] mx-auto flex items-center gap-space-md py-space-xs whitespace-nowrap min-w-max">
+      <a data-page="index.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="index.html">خانه</a>
+      <a data-page="shop.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="shop.html">فروشگاه</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">مانتو و بارانی</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">پوشاک سنتی و دست‌دوز</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">شال و روسری ابریشمی</a>
+      <a data-page="blog.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="blog.html">وبلاگ</a>
+      <a data-page="vendors.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="vendors.html">فروشندگان</a>
+      <a data-page="sale.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-error hover:text-error" href="sale.html">حراج ویژه</a>
+      <a data-page="about.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="about.html">داستان ماه‌رخ</a>
+      <a data-page="contact.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="contact.html">تماس با ما</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-[7.5rem] md:pt-32 bg-surface min-h-screen">
+<div class="flex flex-col w-full">
+<!-- Subtle Architectural Atmospheric Glows -->
+<div class="relative w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-space-lg md:py-space-2xl overflow-hidden">
+<div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-tertiary-fixed/15 blur-3xl pointer-events-none -z-10"></div>
+<!-- Multi-Step Progress Tracker -->
+<section class="w-full mb-space-2xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-[0_4px_24px_-4px_rgba(8,111,115,0.06)]">
+<div class="relative flex items-center justify-between max-w-4xl mx-auto">
+<!-- Background Connecting Line -->
+<div class="absolute top-5 right-6 left-6 h-1 bg-surface-container-highest -z-0">
+<div class="h-full bg-primary transition-all duration-500" style="width: 45%;"></div>
+</div>
+<!-- Step 1: Finished -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-primary font-semibold">۱. سبد خرید</span>
+<span class="font-label-sm text-label-sm text-outline hidden md:inline">اقلام انتخابی</span>
+</div>
+</div>
+<!-- Step 2: Active / Current -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md ring-4 ring-secondary-container">
+<span class="material-symbols-outlined text-lg animate-pulse">local_shipping</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">۲. ارسال و نشانی</span>
+<span class="font-label-sm text-label-sm text-primary font-medium hidden md:inline">در حال تکمیل</span>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs opacity-75">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">credit_card</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-on-surface-variant">۳. درگاه پرداخت</span>
+<span class="font-label-sm text-label-sm text-outline hidden md:inline">انتخاب بانک</span>
+</div>
+</div>
+<!-- Step 4: Final Confirmation -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs opacity-50">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">task_alt</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-on-surface-variant">۴. ثبت نهایی</span>
+<span class="font-label-sm text-label-sm text-outline hidden md:inline">صدور فاکتور</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Checkout Grid (8 cols Left / 4 cols Right in RTL) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-start">
+<!-- Right Content Flow: Items + Address + Delivery (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Section 1: Cart Items Review -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-[0_4px_24px_-4px_rgba(8,111,115,0.06)]">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">بازبینی اقلام سبد خرید (۲ قلم)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-space-sm py-space-2xs rounded-full flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+              تضمین اصالت پارچه و دست‌دوز
+            </span>
+</div>
+<!-- Items Container -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1: Manto Baharestan -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low rounded-xl gap-space-md transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<div class="relative w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Editorial close up shot of a luxury cream colored Persian mantle manteau called Baharestan with delicate pearl embellishments and gold thread embroidery, high couture Iranian craftsmanship, soft warm studio light" src="assets/images/placeholder-wide.svg"/>
+<span class="absolute bottom-1 right-1 bg-primary text-on-primary font-label-sm text-label-sm px-space-2xs rounded">سفارشی</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">مانتوی کرم «بهارستان»</span>
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded">سایز: ۴۰</span>
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EAE4D3] border border-outline-variant inline-block"></span>
+                      کرم مرواریدی
+                    </span>
+<span class="text-tertiary font-medium">طراحی کالکشن بهاره</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">قیمت واحد:</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">۱,۸۹۰,۰۰۰ تومان</span>
+</div>
+</div>
+</div>
+<!-- Quantity & Total -->
+<div class="flex sm:flex-col items-center justify-between sm:items-end w-full sm:w-auto gap-space-sm pt-space-xs sm:pt-0">
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm px-space-xs py-space-2xs">
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+<span class="w-8 text-center font-title-md text-title-md text-on-surface font-bold">۱</span>
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+</div>
+<div class="text-left flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm text-outline">مجموع ردیف:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">۱,۸۹۰,۰۰۰ تومان</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 text-outline hover:text-tertiary transition-colors rounded-md hover:bg-surface-container-highest" title="انتقال به لیست علاقه‌مندی‌ها">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="p-1.5 text-outline hover:text-error transition-colors rounded-md hover:bg-error-container" title="حذف از سبد">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Silk Scarf Mah -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low rounded-xl gap-space-md transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<div class="relative w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Luxurious Persian pure silk scarf named Mah draped elegantly, rich turquoise Toranj medallion patterns on ivory fabric, natural luster, traditional Iranian hand-blocked print art, high contrast macro fashion photography" src="assets/images/placeholder-square.svg"/>
+<span class="absolute bottom-1 right-1 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-2xs rounded">ابریشم خالص</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">شال ابریشمی «ماه»</span>
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded">قواره: ۲۰۰ × ۷۰</span>
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+                      طرح ترنج فیروزه‌ای
+                    </span>
+<span class="text-primary font-medium">چاپ دستی کلاقه‌ای</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">قیمت واحد:</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">۷۹۰,۰۰۰ تومان</span>
+</div>
+</div>
+</div>
+<!-- Quantity & Total -->
+<div class="flex sm:flex-col items-center justify-between sm:items-end w-full sm:w-auto gap-space-sm pt-space-xs sm:pt-0">
+<div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm px-space-xs py-space-2xs">
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+<span class="w-8 text-center font-title-md text-title-md text-on-surface font-bold">۱</span>
+<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+</div>
+<div class="text-left flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm text-outline">مجموع ردیف:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">۷۹۰,۰۰۰ تومان</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 text-outline hover:text-tertiary transition-colors rounded-md hover:bg-surface-container-highest" title="انتقال به لیست علاقه‌مندی‌ها">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="p-1.5 text-outline hover:text-error transition-colors rounded-md hover:bg-error-container" title="حذف از سبد">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Free Shipping Upsell Note -->
+<div class="mt-space-md p-space-sm bg-secondary-container/40 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-secondary-container font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span>سفارش شما مشمول <strong>ارسال رایگان سراسری</strong> مزون ماه‌رخ گردیده است.</span>
+</div>
+<a class="text-primary hover:text-primary-container font-label-sm text-label-sm underline" data-path="all-products" href="shop.html">ادامه خرید</a>
+</div>
+</section>
+<!-- Section 2: Shipping & Recipient Details -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-[0_4px_24px_-4px_rgba(8,111,115,0.06)]">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">مشخصات تحویل‌گیرنده و نشانی ارسال</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">مرحله ۲ از ۴</span>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" onsubmit="event.preventDefault()">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>نام و نام خانوادگی گیرنده</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<input name="recipient_name" class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="مثال: مهسا کریمی" type="text" value=""/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg">badge</span>
+</div>
+</div>
+<!-- Mobile Phone -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>شماره تماس هماهنگی (موبایل)</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<input name="phone" class="w-full text-right bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" dir="ltr" placeholder="۰۹۱۲XXXXXXX" type="tel" value=""/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg">phone_iphone</span>
+</div>
+</div>
+<!-- Province -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>استان</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none shadow-inner cursor-pointer">
+<option selected="">تهران</option>
+<option>اصفهان</option>
+<option>فارس (شیراز)</option>
+<option>خراسان رضوی (مشهد)</option>
+<option>گیلان (رشت)</option>
+<option>آذربایجان شرقی (تبریز)</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline pointer-events-none text-lg">expand_more</span>
+</div>
+</div>
+<!-- City -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>شهر</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<input name="city" class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="نام شهر" type="text" value="تهران"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg">location_city</span>
+</div>
+</div>
+<!-- Full Address -->
+<div class="flex flex-col gap-space-2xs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>نشانی دقیق پستی</span>
+<span class="text-error">*</span>
+</label>
+<textarea name="address" class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner resize-none" placeholder="خیابان اصلی، کوچه، پلاک و زنگ..." rows="2"></textarea>
+</div>
+<!-- Postal Code -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span>کد پستی ده‌رقمی</span>
+<span class="text-error">*</span>
+</label>
+<div class="relative">
+<input name="postal_code" class="w-full text-right bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" dir="ltr" placeholder="مثال: ۱۹۸۷۶۵۴۳۲۱" type="text" value=""/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg">markunread_mailbox</span>
+</div>
+</div>
+<!-- Unit / Plaque Extra -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">ساعت تحویل پیشنهادی</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none shadow-inner cursor-pointer">
+<option>بازه عصر (۱۵:۰۰ الی ۲۰:۰۰)</option>
+<option>بازه صبح (۰۹:۰۰ الی ۱۳:۰۰)</option>
+<option>تمام وقت با هماهنگی قبلی</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline pointer-events-none text-lg">schedule</span>
+</div>
+</div>
+<!-- Order Notes / Gift packaging request -->
+<div class="flex flex-col gap-space-2xs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-space-xs">
+<span>یادداشت یا درخواست ویژه بسته‌بندی</span>
+<span class="text-tertiary font-label-sm text-label-sm">(بسته‌بندی هدیه رایگان)</span>
+</label>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="لطفاً بسته‌بندی کادویی با روبان فیروزه‌ای ماه‌رخ و کارت تبریک اختصاصی انجام شود."/>
+</div>
+</form>
+</section>
+<!-- Section 3: Shipping Method Selection -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-[0_4px_24px_-4px_rgba(8,111,115,0.06)]">
+<div class="flex items-center gap-space-xs pb-space-md">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">انتخاب شیوه ارسال</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Option 1: Postal Service (Selected - Free) -->
+<label class="relative flex flex-col p-space-md rounded-xl cursor-pointer transition-all bg-secondary-container/20 border-2 border-primary shadow-sm hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-5 h-5 text-primary accent-primary cursor-pointer" name="shipping_method" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">پست پیشتاز سراسری</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">تحویل ۲ الی ۳ روز کاری • بیمه نفیس کالا</span>
+</div>
+</div>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full font-bold">رایگان</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<span>هدیه ماه‌رخ برای سبدهای بالای ۱.۵ میلیون</span>
+</div>
+</label>
+<!-- Option 2: Express Courier -->
+<label class="relative flex flex-col p-space-md rounded-xl cursor-pointer transition-all bg-surface-container-low border-2 border-transparent hover:border-outline-variant shadow-sm hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<input class="w-5 h-5 text-primary accent-primary cursor-pointer" name="shipping_method" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">ارسال اکسپرس مزون</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ویژه شهر تهران • تحویل فوری امروز با پیک اختصاصی</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">۴۵,۰۰۰ تومان</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">electric_bolt</span>
+<span>سفیر اختصاصی با لباس فرم مزون</span>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- Left Content Flow: Order Summary Sticky Card (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md sticky top-48">
+<!-- Coupon Code Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_24px_-4px_rgba(8,111,115,0.06)]">
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-tertiary">sell</span>
+<span>کد تخفیف یا کارت هدیه</span>
+</label>
+<div class="flex items-center gap-space-xs">
+<input class="w-full bg-surface-container-low uppercase tracking-wider px-space-sm py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="کد تخفیف را وارد نمایید..." type="text" value="MAHROKH1403"/>
+<button class="bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap">
+              اعمال کد
+            </button>
+</div>
+<!-- Coupon Applied Toast Message -->
+<div class="mt-space-xs p-space-2xs bg-[#ECFDF5] text-[#065F46] rounded-md flex items-center gap-space-2xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>کد «MAHROKH1403» با ۱۵۰,۰۰۰ تومان تخفیف اعمال شد.</span>
+</div>
+</div>
+<!-- Order Summary Receipt Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-[0_4px_24px_-4px_rgba(8,111,115,0.08)]">
+<div class="flex items-center justify-between pb-space-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">خلاصه صورت‌حساب</h3>
+<span class="font-label-sm text-label-sm text-outline">واحد: تومان</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Row 1: Subtotal -->
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">مجموع اقلام (۲ کالا)</span>
+<span class="font-semibold text-on-surface">۲,۶۸۰,۰۰۰ تومان</span>
+</div>
+<!-- Row 2: Discount -->
+<div class="flex items-center justify-between font-body-md text-body-md text-tertiary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">loyalty</span>
+<span>تخفیف ویژه ماه‌رخ</span>
+</span>
+<span class="font-semibold">۱۵۰,۰۰۰- تومان</span>
+</div>
+<!-- Row 3: Delivery -->
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">هزینه بسته‌بندی و ارسال</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>رایگان</span>
+</span>
+</div>
+<!-- Row 4: Client Profit -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="text-outline">سود شما از این سفارش</span>
+<span class="text-tertiary font-bold">۱۵۰,۰۰۰ تومان</span>
+</div>
+<!-- Divider Line Visual -->
+<div class="w-full h-px bg-surface-variant my-space-xs"></div>
+<!-- Final Payable Amount -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">مبلغ نهایی قابل پرداخت:</span>
+<span class="font-label-sm text-label-sm text-outline">شامل کلیه مالیات‌ها و عوارض</span>
+</div>
+<div class="text-left">
+<span class="font-headline-md text-headline-md text-primary font-bold">۲,۵۳۰,۰۰۰</span>
+<span class="font-label-sm text-label-sm text-primary font-medium block">تومان</span>
+</div>
+</div>
+<!-- CTA Button -->
+<button type="button" data-place-order class="mt-space-md w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-lg text-label-lg py-space-sm px-space-md rounded-xl transition-all shadow-[0_4px_24px_-4px_rgba(8,111,115,0.25)] hover:shadow-lg flex items-center justify-center gap-space-xs text-center" href="#">
+<span>اتصال به درگاه امن و تکمیل سفارش</span>
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+</button>
+<div data-checkout-feedback class="mt-3 hidden rounded-lg px-3 py-2 text-sm"></div>
+<!-- Secure Payment Badges & Supported Banks -->
+<div class="mt-space-sm pt-space-xs flex flex-col items-center gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-primary text-sm">lock</span>
+<span>تراکنش تحت پوشش شاپرک و درگاه‌های رسمی بانک مرکزی</span>
+</div>
+<!-- Bank Gateway Logos / Mock Visuals -->
+<div class="flex items-center justify-center gap-space-sm pt-space-xs">
+<div class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">سامان کیش</div>
+<div class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">به‌پرداخت ملت</div>
+<div class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">پاسارگاد</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Guarantee & VIP Care Box -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold">بسته‌بندی شناسنامه‌دار ماه‌رخ</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              تمامی منسوجات در جعبه‌های نفیس مات با کاور مخمل ضدغبار و روبان‌های ابریشمی آماده‌سازی و ممهور به موم مزون ارسال می‌گردند.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-surface-container-low pt-space-3xl pb-space-xl mt-space-3xl">
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
+    <div class="space-y-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="font-headline-md text-headline-md text-primary">مزون ماه‌رخ</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">ماه‌رخ بازتابی از پیوند اصالت هنر ایرانی و زیبایی‌شناسی معاصر است. طراحی دست‌دوز، منسوجات نفیس ابریشم و الگوهای فاخر معماری، هویتی بی‌بدیل به هر اثر می‌بخشند.</p>
+      <div class="flex items-center gap-space-sm text-primary">
+        <span class="material-symbols-outlined">verified</span>
+        <span class="font-label-md text-label-md">گواهی اصالت دوخت و الیاف طبیعی</span>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">خدمات مشتریان</h4>
+      <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">راهنمای خرید و ارسال</a></li>
+        <li class="hover:text-primary transition-colors"><a href="faq.html">پرسش‌های متداول</a></li>
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">شرایط تعویض و بازگشت کالا</a></li>
+        <li class="hover:text-primary transition-colors"><a href="account/orders.html">پیگیری سفارش و مرسوله</a></li>
+        <li class="hover:text-primary transition-colors"><a href="contact.html">خدمات شخصی‌دوزی ویژه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="size-guide.html">راهنمای سایز</a></li>
+        <li class="hover:text-primary transition-colors"><a href="order-tracking.html">رهگیری سفارش (بدون ورود)</a></li>
+        <li class="hover:text-primary transition-colors"><a href="gift-cards.html">کارت هدیه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="brands.html">برندهای همکار</a></li>
+        <li class="hover:text-primary transition-colors"><a href="become-vendor.html">فروشنده ماه‌رخ شوید</a></li>
+      </ul>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">شوروم و ارتباط مستقیم</h4>
+      <div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+        <div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary mt-1">location_on</span><span>تهران، زعفرانیه، خیابان آصف، پلاک ۴۴، عمارت ماه‌رخ</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">call</span><span dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">mail</span><span>atelier@mahrokh.ir</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">schedule</span><span>شنبه تا پنجشنبه: ۱۰:۰۰ الی ۲۱:۰۰ (با هماهنگی قبلی)</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm pt-space-xs">
+        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        <a href="#" aria-label="تلگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">send</span></a>
+        <a href="#" aria-label="واتس‌اپ" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">chat</span></a>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">باشگاه مشتریان ماه‌رخ</h4>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">عضویت در خبرنامه باشگاه مشتریان ماه‌رخ جهت دریافت تخفیف‌های ویژه و دسترسی اختصاصی به مجموعه‌های نو</p>
+      <form class="flex flex-col gap-space-xs" data-api-form="submissions" data-reset="true"><input type="hidden" name="type" value="newsletter">
+        <input name="contact" required class="w-full bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none" placeholder="شماره تماس یا ایمیل شما..." type="email"/>
+        <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-space-xs rounded-lg transition-colors shadow-card">عضویت در حلقه اختصاصی</button>
+      <div data-form-feedback class="hidden text-secondary text-sm rounded-lg px-3 py-2"></div></form>
+      <div class="flex items-center gap-space-md pt-space-xs">
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">verified_user</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-tertiary text-2xl">workspace_premium</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">lock</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop mt-space-2xl pt-space-md border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant text-center md:text-right">
+    <span>تمامی حقوق مادی و معنوی برای مزون پوشاک ماه‌رخ محفوظ است © ۱۴۰۳</span>
+    <div class="flex items-center gap-space-md">
+      <a class="hover:text-primary transition-colors" href="login.html">ورود</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="register.html">ثبت‌نام</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="privacy.html">حریم خصوصی</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="terms.html">قوانین و مقررات</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/currency-formatter.js"></script>
+<script src="js/core/cart-service.js"></script>
+<script src="js/core/wishlist-service.js"></script>
+<script src="js/core/permission-service.js"></script>
+<script src="js/ui/nav-highlighter.js"></script>
+<script src="js/ui/accordion.js"></script>
+<script src="js/ui/tabs.js"></script>
+<script src="js/ui/quantity-stepper.js"></script>
+<script src="js/ui/form-handler.js"></script>
+<script src="js/ui/badge-updater.js"></script>
+<script src="js/ui/product-actions.js"></script>
+<script src="js/ui/cart-page-renderer.js"></script>
+<script src="js/ui/permission-gate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth-ui.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/live-products.js"></script>
+</body>
+</html>

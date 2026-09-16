@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>فروشگاه — فیلتر کنار (راست) | ماه‌رخ</title>
+<meta name="description" content="فروشگاه ماه‌رخ با نوار فیلتر کنار صفحه."/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-card">
+  <div class="bg-primary text-on-primary py-space-2xs px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between font-label-sm text-label-sm">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-sm">local_shipping</span>
+        <span>ارسال رایگان برای خریدهای بالای ۱,۵۰۰,۰۰۰ تومان به سراسر ایران • بسته‌بندی نفیس هدیه</span>
+      </div>
+      <div class="hidden md:flex items-center gap-space-sm">
+        <span>پشتیبانی اختصاصی مزون:</span>
+        <span class="font-semibold tracking-wider" dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span>
+        <span class="material-symbols-outlined text-sm">support_agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-sm">
+      <img alt="ماه‌رخ" class="w-9 h-9" src="assets/images/logo-mahrokh.svg"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">ماه‌رخ</span>
+        <span class="font-label-sm text-label-sm text-tertiary">پوشاک زنانه با الهام از ایران</span>
+      </div>
+    </a>
+
+    <form class="hidden lg:flex flex-1 max-w-2xl mx-space-lg" action="shop.html" method="get">
+      <div class="w-full flex items-center bg-surface-container-lowest rounded-xl shadow-card px-space-sm py-space-xs">
+        <span class="material-symbols-outlined text-outline ml-space-xs">search</span>
+        <input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder-outline" name="q" placeholder="جست‌وجوی محصول، دسته‌بندی یا برند..." type="text"/>
+        <button type="submit" class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-space-2xs rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">جست‌وجو</button>
+      </div>
+    </form>
+
+    <div class="flex items-center gap-space-xs md:gap-space-sm">
+      <a class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-lg transition-colors font-label-md text-label-md" href="account/dashboard.html">
+        <span class="material-symbols-outlined text-lg">person</span>
+        <span>حساب من</span>
+      </a>
+      <a class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors rounded-lg" href="account/wishlist.html">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+        <span id="wishlist-count" class="absolute top-0 left-0 w-4 h-4 bg-tertiary text-on-tertiary rounded-full font-label-sm text-[10px] leading-4 text-center">۰</span>
+      </a>
+      <a class="relative flex items-center gap-space-2xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs rounded-lg transition-colors shadow-card font-label-md text-label-md" href="cart.html">
+        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+        <span class="hidden sm:inline">سبد خرید</span>
+        <span id="cart-count" class="bg-on-primary text-primary rounded-full w-5 h-5 text-[11px] leading-5 text-center font-bold">۰</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full px-margin-mobile md:px-margin-desktop overflow-x-auto scrollbar-none border-t border-outline-variant/40">
+    <nav id="main-nav" class="max-w-[1440px] mx-auto flex items-center gap-space-md py-space-xs whitespace-nowrap min-w-max">
+      <a data-page="index.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="index.html">خانه</a>
+      <a data-page="shop.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="shop.html">فروشگاه</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">مانتو و بارانی</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">پوشاک سنتی و دست‌دوز</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">شال و روسری ابریشمی</a>
+      <a data-page="blog.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="blog.html">وبلاگ</a>
+      <a data-page="vendors.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="vendors.html">فروشندگان</a>
+      <a data-page="sale.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-error hover:text-error" href="sale.html">حراج ویژه</a>
+      <a data-page="about.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="about.html">داستان ماه‌رخ</a>
+      <a data-page="contact.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="contact.html">تماس با ما</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-[7.5rem] md:pt-32 bg-surface min-h-screen">
+<div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-lg">
+  <nav class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-2xs mb-space-md">
+    <a href="index.html" class="hover:text-primary">خانه</a><span>/</span><span class="text-on-surface">فروشگاه</span>
+  </nav>
+  <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-space-lg">فروشگاه با فیلتر کناری</h1>
+  <div class="flex flex-col lg:flex-row gap-space-lg items-start">
+    <aside class="w-full lg:w-64 shrink-0 space-y-space-md">
+  <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-card">
+    <h3 class="font-title-lg text-title-lg text-on-surface mb-space-sm">دسته‌بندی</h3>
+    <div class="space-y-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+      <label class="flex items-center gap-space-2xs"><input type="checkbox" class="rounded"/>مانتو و بارانی</label>
+      <label class="flex items-center gap-space-2xs"><input type="checkbox" class="rounded"/>پوشاک سنتی</label>
+      <label class="flex items-center gap-space-2xs"><input type="checkbox" class="rounded"/>شال و روسری</label>
+      <label class="flex items-center gap-space-2xs"><input type="checkbox" class="rounded"/>پیراهن مجلسی</label>
+      <label class="flex items-center gap-space-2xs"><input type="checkbox" class="rounded"/>اکسسوری و زیورآلات</label>
+    </div>
+  </div>
+  <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-card">
+    <h3 class="font-title-lg text-title-lg text-on-surface mb-space-sm">محدوده قیمت</h3>
+    <input type="range" class="w-full accent-primary"/>
+    <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-space-2xs"><span>۵۰۰,۰۰۰</span><span>۵,۰۰۰,۰۰۰ تومان</span></div>
+  </div>
+  <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-card">
+    <h3 class="font-title-lg text-title-lg text-on-surface mb-space-sm">سایز</h3>
+    <div class="flex flex-wrap gap-space-2xs">
+      <span class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-body-sm text-on-surface-variant">۳۶</span>
+      <span class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-body-sm text-on-surface-variant">۳۸</span>
+      <span class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-body-sm text-on-surface-variant">۴۰</span>
+      <span class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-body-sm text-on-surface-variant">۴۲</span>
+      <span class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-body-sm text-on-surface-variant">۴۴</span>
+    </div>
+  </div>
+  <button class="w-full bg-primary text-on-primary font-label-md text-label-md py-space-xs rounded-lg">اعمال فیلتر</button>
+</aside>
+    <div class="flex-1 min-w-0">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-space-md">
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="مانتوی کرم «بهارستان»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-8420" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">مانتو و بارانی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">مانتوی کرم «بهارستان»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۱,۸۹۰,۰۰۰ تومان</span>
+      <span class="text-label-sm text-outline line-through mr-space-2xs">۲,۱۰۰,۰۰۰</span><span class="bg-error text-on-error text-[10px] px-1.5 py-0.5 rounded-full font-label-sm">۱۰٪-</span>
+    </div>
+    <button data-add-to-cart data-id="mr-8420" data-name="مانتوی کرم «بهارستان»" data-price="1890000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="روسری ابریشم «ترنج فیروزه‌ای»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-3311" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">شال و روسری</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">روسری ابریشم «ترنج فیروزه‌ای»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۸۹۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-3311" data-name="روسری ابریشم «ترنج فیروزه‌ای»" data-price="890000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="پیراهن مجلسی «گلستان»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-5502" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">پیراهن و لباس مجلسی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">پیراهن مجلسی «گلستان»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۳,۴۵۰,۰۰۰ تومان</span>
+      <span class="text-label-sm text-outline line-through mr-space-2xs">۳,۹۰۰,۰۰۰</span><span class="bg-error text-on-error text-[10px] px-1.5 py-0.5 rounded-full font-label-sm">۱۲٪-</span>
+    </div>
+    <button data-add-to-cart data-id="mr-5502" data-name="پیراهن مجلسی «گلستان»" data-price="3450000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="مانتوی لینن «اصفهان»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-1190" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">مانتو و بارانی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">مانتوی لینن «اصفهان»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۲,۱۵۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-1190" data-name="مانتوی لینن «اصفهان»" data-price="2150000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="شال کشمیر «نوروز»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-7765" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">شال و روسری</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">شال کشمیر «نوروز»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۱,۲۹۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-7765" data-name="شال کشمیر «نوروز»" data-price="1290000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="پالتو بارانی «کاشان»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-2204" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">مانتو و بارانی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">پالتو بارانی «کاشان»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۴,۲۰۰,۰۰۰ تومان</span>
+      <span class="text-label-sm text-outline line-through mr-space-2xs">۴,۶۵۰,۰۰۰</span><span class="bg-error text-on-error text-[10px] px-1.5 py-0.5 rounded-full font-label-sm">۱۰٪-</span>
+    </div>
+    <button data-add-to-cart data-id="mr-2204" data-name="پالتو بارانی «کاشان»" data-price="4200000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-square.svg" alt="دست‌بند طلایی «اسلیمی»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-9081" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">اکسسوری و زیورآلات</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">دست‌بند طلایی «اسلیمی»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۶۵۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-9081" data-name="دست‌بند طلایی «اسلیمی»" data-price="650000" data-variant="استاندارد" data-image="assets/images/placeholder-square.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="پوشاک سوزن‌دوزی «بلوچ»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-3390" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">پوشاک سنتی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">پوشاک سوزن‌دوزی «بلوچ»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۲,۸۹۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-3390" data-name="پوشاک سوزن‌دوزی «بلوچ»" data-price="2890000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="شومیز ابریشمی «یاسمن»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-4471" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">پیراهن و لباس مجلسی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">شومیز ابریشمی «یاسمن»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۱,۶۵۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-4471" data-name="شومیز ابریشمی «یاسمن»" data-price="1650000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="مانتوی کتان «شیراز»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-6620" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">مانتو و بارانی</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">مانتوی کتان «شیراز»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۱,۹۹۰,۰۰۰ تومان</span>
+      <span class="text-label-sm text-outline line-through mr-space-2xs">۲,۲۵۰,۰۰۰</span><span class="bg-error text-on-error text-[10px] px-1.5 py-0.5 rounded-full font-label-sm">۱۲٪-</span>
+    </div>
+    <button data-add-to-cart data-id="mr-6620" data-name="مانتوی کتان «شیراز»" data-price="1990000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-square.svg" alt="گردنبند فیروزه «ماه‌رخ»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-7712" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">اکسسوری و زیورآلات</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">گردنبند فیروزه «ماه‌رخ»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۹۸۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-7712" data-name="گردنبند فیروزه «ماه‌رخ»" data-price="980000" data-variant="استاندارد" data-image="assets/images/placeholder-square.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all hover:-translate-y-0.5">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <a href="product.html"><img src="assets/images/placeholder-portrait.svg" alt="روسری قلمکار «اصفهان»" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/></a>
+    <button data-wishlist-toggle data-id="mr-8834" class="absolute top-space-xs left-space-xs w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors">
+      <span class="material-symbols-outlined text-lg">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-sm space-y-space-2xs">
+    <span class="font-label-sm text-label-sm text-primary">شال و روسری</span>
+    <a href="product.html" class="block font-title-md text-title-md text-on-surface hover:text-primary transition-colors">روسری قلمکار «اصفهان»</a>
+    <div class="flex items-center justify-between pt-space-2xs">
+      <span class="font-title-md text-title-md text-tertiary font-bold">۷۶۰,۰۰۰ تومان</span>
+      
+    </div>
+    <button data-add-to-cart data-id="mr-8834" data-name="روسری قلمکار «اصفهان»" data-price="760000" data-variant="استاندارد" data-image="assets/images/placeholder-portrait.svg" data-label="افزوده شد" class="w-full mt-space-xs bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md py-space-xs rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+      <span class="material-symbols-outlined text-lg">shopping_bag</span><span>افزودن به سبد خرید</span>
+    </button>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="w-full bg-surface-container-low pt-space-3xl pb-space-xl mt-space-3xl">
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
+    <div class="space-y-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="font-headline-md text-headline-md text-primary">مزون ماه‌رخ</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">ماه‌رخ بازتابی از پیوند اصالت هنر ایرانی و زیبایی‌شناسی معاصر است. طراحی دست‌دوز، منسوجات نفیس ابریشم و الگوهای فاخر معماری، هویتی بی‌بدیل به هر اثر می‌بخشند.</p>
+      <div class="flex items-center gap-space-sm text-primary">
+        <span class="material-symbols-outlined">verified</span>
+        <span class="font-label-md text-label-md">گواهی اصالت دوخت و الیاف طبیعی</span>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">خدمات مشتریان</h4>
+      <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">راهنمای خرید و ارسال</a></li>
+        <li class="hover:text-primary transition-colors"><a href="faq.html">پرسش‌های متداول</a></li>
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">شرایط تعویض و بازگشت کالا</a></li>
+        <li class="hover:text-primary transition-colors"><a href="account/orders.html">پیگیری سفارش و مرسوله</a></li>
+        <li class="hover:text-primary transition-colors"><a href="contact.html">خدمات شخصی‌دوزی ویژه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="size-guide.html">راهنمای سایز</a></li>
+        <li class="hover:text-primary transition-colors"><a href="order-tracking.html">رهگیری سفارش (بدون ورود)</a></li>
+        <li class="hover:text-primary transition-colors"><a href="gift-cards.html">کارت هدیه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="brands.html">برندهای همکار</a></li>
+        <li class="hover:text-primary transition-colors"><a href="become-vendor.html">فروشنده ماه‌رخ شوید</a></li>
+      </ul>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">شوروم و ارتباط مستقیم</h4>
+      <div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+        <div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary mt-1">location_on</span><span>تهران، زعفرانیه، خیابان آصف، پلاک ۴۴، عمارت ماه‌رخ</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">call</span><span dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">mail</span><span>atelier@mahrokh.ir</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">schedule</span><span>شنبه تا پنجشنبه: ۱۰:۰۰ الی ۲۱:۰۰ (با هماهنگی قبلی)</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm pt-space-xs">
+        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        <a href="#" aria-label="تلگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">send</span></a>
+        <a href="#" aria-label="واتس‌اپ" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">chat</span></a>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">باشگاه مشتریان ماه‌رخ</h4>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">عضویت در خبرنامه باشگاه مشتریان ماه‌رخ جهت دریافت تخفیف‌های ویژه و دسترسی اختصاصی به مجموعه‌های نو</p>
+      <form class="flex flex-col gap-space-xs" data-api-form="submissions" data-reset="true"><input type="hidden" name="type" value="newsletter">
+        <input name="contact" required class="w-full bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none" placeholder="شماره تماس یا ایمیل شما..." type="email"/>
+        <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-space-xs rounded-lg transition-colors shadow-card">عضویت در حلقه اختصاصی</button>
+      <div data-form-feedback class="hidden text-secondary text-sm rounded-lg px-3 py-2"></div></form>
+      <div class="flex items-center gap-space-md pt-space-xs">
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">verified_user</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-tertiary text-2xl">workspace_premium</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">lock</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop mt-space-2xl pt-space-md border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant text-center md:text-right">
+    <span>تمامی حقوق مادی و معنوی برای مزون پوشاک ماه‌رخ محفوظ است © ۱۴۰۳</span>
+    <div class="flex items-center gap-space-md">
+      <a class="hover:text-primary transition-colors" href="login.html">ورود</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="register.html">ثبت‌نام</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="privacy.html">حریم خصوصی</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="terms.html">قوانین و مقررات</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/currency-formatter.js"></script>
+<script src="js/core/cart-service.js"></script>
+<script src="js/core/wishlist-service.js"></script>
+<script src="js/core/permission-service.js"></script>
+<script src="js/ui/nav-highlighter.js"></script>
+<script src="js/ui/accordion.js"></script>
+<script src="js/ui/tabs.js"></script>
+<script src="js/ui/quantity-stepper.js"></script>
+<script src="js/ui/form-handler.js"></script>
+<script src="js/ui/badge-updater.js"></script>
+<script src="js/ui/product-actions.js"></script>
+<script src="js/ui/cart-page-renderer.js"></script>
+<script src="js/ui/permission-gate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth-ui.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/live-products.js"></script>
+</body>
+</html>

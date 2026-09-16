@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ماه‌رخ | پوشاک لوکس زنانه با الهام از هنر ایرانی</title>
+<meta name="description" content="مزون آنلاین ماه‌رخ؛ پوشاک زنانه فاخر با الهام از معماری و هنر ایرانی."/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-card">
+  <div class="bg-primary text-on-primary py-space-2xs px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between font-label-sm text-label-sm">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-sm">local_shipping</span>
+        <span>ارسال رایگان برای خریدهای بالای ۱,۵۰۰,۰۰۰ تومان به سراسر ایران • بسته‌بندی نفیس هدیه</span>
+      </div>
+      <div class="hidden md:flex items-center gap-space-sm">
+        <span>پشتیبانی اختصاصی مزون:</span>
+        <span class="font-semibold tracking-wider" dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span>
+        <span class="material-symbols-outlined text-sm">support_agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+    <a href="index.html" class="flex items-center gap-space-sm">
+      <img alt="ماه‌رخ" class="w-9 h-9" src="assets/images/logo-mahrokh.svg"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">ماه‌رخ</span>
+        <span class="font-label-sm text-label-sm text-tertiary">پوشاک زنانه با الهام از ایران</span>
+      </div>
+    </a>
+
+    <form class="hidden lg:flex flex-1 max-w-2xl mx-space-lg" action="shop.html" method="get">
+      <div class="w-full flex items-center bg-surface-container-lowest rounded-xl shadow-card px-space-sm py-space-xs">
+        <span class="material-symbols-outlined text-outline ml-space-xs">search</span>
+        <input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder-outline" name="q" placeholder="جست‌وجوی محصول، دسته‌بندی یا برند..." type="text"/>
+        <button type="submit" class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-space-2xs rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">جست‌وجو</button>
+      </div>
+    </form>
+
+    <div class="flex items-center gap-space-xs md:gap-space-sm">
+      <a class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-lg transition-colors font-label-md text-label-md" href="account/dashboard.html">
+        <span class="material-symbols-outlined text-lg">person</span>
+        <span>حساب من</span>
+      </a>
+      <a class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors rounded-lg" href="account/wishlist.html">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+        <span id="wishlist-count" class="absolute top-0 left-0 w-4 h-4 bg-tertiary text-on-tertiary rounded-full font-label-sm text-[10px] leading-4 text-center">۰</span>
+      </a>
+      <a class="relative flex items-center gap-space-2xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs rounded-lg transition-colors shadow-card font-label-md text-label-md" href="cart.html">
+        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+        <span class="hidden sm:inline">سبد خرید</span>
+        <span id="cart-count" class="bg-on-primary text-primary rounded-full w-5 h-5 text-[11px] leading-5 text-center font-bold">۰</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full px-margin-mobile md:px-margin-desktop overflow-x-auto scrollbar-none border-t border-outline-variant/40">
+    <nav id="main-nav" class="max-w-[1440px] mx-auto flex items-center gap-space-md py-space-xs whitespace-nowrap min-w-max">
+      <a data-page="index.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="index.html">خانه</a>
+      <a data-page="shop.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="shop.html">فروشگاه</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">مانتو و بارانی</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">پوشاک سنتی و دست‌دوز</a>
+      <a data-page="category.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="category.html">شال و روسری ابریشمی</a>
+      <a data-page="blog.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="blog.html">وبلاگ</a>
+      <a data-page="vendors.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="vendors.html">فروشندگان</a>
+      <a data-page="sale.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-error hover:text-error" href="sale.html">حراج ویژه</a>
+      <a data-page="about.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="about.html">داستان ماه‌رخ</a>
+      <a data-page="contact.html" class="nav-link px-space-sm py-space-2xs transition-colors rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface" href="contact.html">تماس با ما</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-[7.5rem] md:pt-32 bg-surface min-h-screen">
+<div class="flex flex-col w-full overflow-hidden">
+<!-- SECTION 1: HERO SHOWCASE (Split Editorial) -->
+<section class="relative w-full px-margin-mobile md:px-margin-desktop py-space-xl md:py-space-3xl overflow-hidden">
+<!-- Subtle architectural ambient glow -->
+<div class="absolute top-10 right-10 w-96 h-96 rounded-full bg-secondary-container/30 blur-3xl -z-10 pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-tertiary-fixed/20 blur-3xl -z-10 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Right: Text & Editorial Concept (RTL leading side) -->
+<div class="lg:col-span-6 flex flex-col space-y-space-lg text-right z-10">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-space-2xs rounded-full bg-surface-container-high text-primary font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>مجموعه فاخر نوروز و بهاره ۱۴۰۳</span>
+<span class="text-tertiary">★</span>
+</div>
+<div class="space-y-space-sm">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight leading-tight">
+            زیبایی ایرانی،<br/>
+<span class="text-primary font-headline-lg italic">برای امروز.</span>
+</h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl leading-relaxed text-justify">
+            مجموعه‌ای فاخر از پوشاک زنانه با طراحی معاصر و الهام‌گرفته از هنر، معماری و رنگ‌های اصیل ایران زمین. دوخت ظریف دست‌دوز، توازن بی‌بدیل ابریشم خالص و شکوه نقوش اسلیمی.
+          </p>
+</div>
+<!-- Call to Actions -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="group relative inline-flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-lg py-space-sm rounded-full font-label-lg text-label-lg shadow-[0_12px_28px_-6px_rgba(0,103,104,0.35)] transition-all duration-300 transform hover:-translate-y-0.5" data-path="nowruz-collection" href="category.html">
+<span>مشاهده مجموعه جدید</span>
+<span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface px-space-lg py-space-sm rounded-full font-label-lg text-label-lg transition-colors" data-path="about-mahrokh" href="about.html">
+<span class="material-symbols-outlined text-base text-primary">auto_stories</span>
+<span>داستان ماه‌رخ</span>
+</a>
+</div>
+<!-- Trust Chips Bar -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-md">
+<div class="flex flex-col items-center sm:items-start p-space-xs bg-surface-container-lowest/80 backdrop-blur rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-xl">palette</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">طراحی اختصاصی</span>
+<span class="font-label-sm text-label-sm text-outline">برش‌های هنری معاصر</span>
+</div>
+<div class="flex flex-col items-center sm:items-start p-space-xs bg-surface-container-lowest/80 backdrop-blur rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-xl">eco</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">الیاف کاملاً طبیعی</span>
+<span class="font-label-sm text-label-sm text-outline">ابریشم، پنبه، لینن خالص</span>
+</div>
+<div class="flex flex-col items-center sm:items-start p-space-xs bg-surface-container-lowest/80 backdrop-blur rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-xl">all_inclusive</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">ارسال نفیس و سریع</span>
+<span class="font-label-sm text-label-sm text-outline">جعبه مخمل و معطر</span>
+</div>
+</div>
+</div>
+<!-- Left: Dynamic Editorial Composition -->
+<div class="lg:col-span-6 relative flex justify-center items-center">
+<div class="relative w-full max-w-lg aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-surface-container">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" data-alt="Editorial portrait of an elegant Persian woman in contemporary turquoise silk manto coat with subtle gold floral embroidery, standing gracefully in a sunlit Persian courtyard garden with historic plasterwork arches." src="assets/images/placeholder-portrait.svg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<!-- Floating Editorial Pill -->
+<div class="absolute bottom-6 right-6 left-6 p-space-sm bg-surface-container-lowest/90 backdrop-blur-md rounded-2xl shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">dry_cleaning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">مانتوی ابریشم فیروزه</span>
+<span class="font-label-sm text-label-sm text-primary">کالکشن خصوصی اسلیمی • کد ۹۰۴</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">۲,۴۵۰,۰۰۰ <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">تومان</span></span>
+</div>
+</div>
+<!-- Overlapping Secondary Visual Card (Desktop Asymmetry) -->
+<div class="hidden sm:block absolute -bottom-8 -left-4 w-44 h-56 rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest p-1 -rotate-3 hover:rotate-0 transition-transform">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Close-up detailed macro shot of Persian hand-woven silk fabric showing exquisite turquoise and antique gold threads interwoven with delicate floral patterns." src="assets/images/placeholder-square.svg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: FEATURED CATEGORIES -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="space-y-space-2xs text-center md:text-right">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">مجموعه‌های تخصصی</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">دسته‌بندی‌های برگزیده ماه‌رخ</h2>
+</div>
+<a class="inline-flex items-center gap-space-2xs text-primary font-label-lg text-label-lg hover:text-primary-container transition-colors" data-path="all-products" href="shop.html">
+<span>مشاهده تمامی گروه‌ها</span>
+<span class="material-symbols-outlined text-lg">west</span>
+</a>
+</div>
+<!-- Categories Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-md">
+<!-- 1: مانتو و عبا -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="manto-raincoats" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Fashion portrait of a chic modest modern Iranian manto coat in soft sage and stone tones, minimalist studio photography." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">مانتو و عبا</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۴۲ مدل</span>
+</a>
+<!-- 2: پوشاک سنتی و سوزن‌دوزی -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="traditional-garments" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Delicate Persian needlework and traditional embroidery pattern in jewel tones on handcrafted fabric vest." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">سوزن‌دوزی و سنتی</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۱۸ مدل</span>
+</a>
+<!-- 3: شال و روسری ابریشمی -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="silk-scarves" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Flowing pure silk scarf draping gracefully with turquoise arabesque motifs, warm editorial studio lighting." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">شال و روسری ابریشم</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۳۵ مدل</span>
+</a>
+<!-- 4: پیراهن‌های مجلسی -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="evening-dresses" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="High-end elegant modest evening gown in rich cream and emerald silk fabric with couture drapery." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">پیراهن‌های مجلسی</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۲۹ مدل</span>
+</a>
+<!-- 5: اکسسوری و کیف دستی -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="accessories-jewelry" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Artisanal leather handbag with miniature Persian brass clasp and turquoise stone inlay, resting on travertine stone." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">اکسسوری و کیف دستی</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۵۴ اثر</span>
+</a>
+<!-- 6: کاردست و قلم‌کار -->
+<a class="group flex flex-col items-center text-center p-space-sm bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all" data-path="traditional-garments" href="category.html">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-space-sm p-1 bg-surface-container">
+<img class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Artisanal hand block printed Ghalamkar fabric jacket with intricate Isfahan floral block prints in indigo and terracotta." src="assets/images/placeholder-avatar.svg"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">کاردست و قلم‌کار</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">۱۶ اثر</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 3: NEW ARRIVALS (Interactive Curated Product Grid) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<!-- Section Header with Filter Tabs -->
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-space-md">
+<div class="space-y-space-2xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">جدیدترین دست‌سازه‌ها</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">تازه‌های مزون ماه‌رخ</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">هر اثر تنها به تعداد بسیار محدود و با پارچه‌های دست‌گزین تولید می‌شود.</p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2 w-full md:w-auto">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-sm whitespace-nowrap">همه آثار</button>
+<button class="bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap">مانتو و پالتو</button>
+<button class="bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap">دست‌دوز فاخر</button>
+<button class="bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap">ابریشم و شال</button>
+</div>
+</div>
+<!-- 4 Product Cards Grid (3:4 aspect ratio luxury cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Product 1: مانتوی کرم بهارستان -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Editorial model wearing cream minimalist linen-silk blend manto coat 'Baharestan' with structured silhouette and muted gold mother-of-pearl buttons." src="assets/images/placeholder-wide.svg"/>
+<!-- Badges -->
+<div class="absolute top-3 right-3 flex flex-col gap-1">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-xs py-0.5 rounded-md shadow-sm">پرفروش</span>
+</div>
+<!-- Quick Favorite & View Overlay -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-error flex items-center justify-center shadow-md transition-colors" title="افزودن به علاقه‌مندی">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center shadow-md transition-colors" title="مشاهده سریع">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+<!-- Size Indicator Strip -->
+<div class="absolute bottom-2 inset-x-2 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/95 backdrop-blur py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline">سایزها:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۳۶</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۳۸</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۴۰</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۴۲</span>
+</div>
+</div>
+<!-- Card Details -->
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-sm">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>لینن و ابریشم خالص</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface mr-1">۴.۹</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">مانتوی کرم «بهارستان»</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۱,۸۹۰,۰۰۰</span>
+<span class="font-label-sm text-label-sm text-outline">تومان</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-space-xs rounded-xl font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">keyboard_double_arrow_left</span>
+<span>خرید</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2: مانتوی فیروزه‌ای ترنج (Discount Badge) -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Iranian fashion model wearing deep turquoise modern trench coat manto 'Toranj' with discreet Persian geometric lapel embroidery, elegant pose." src="assets/images/placeholder-square.svg"/>
+<div class="absolute top-3 right-3 flex flex-col gap-1">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-md shadow-sm">۱۵٪ تخفیف نوروزی</span>
+</div>
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-error flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+<div class="absolute bottom-2 inset-x-2 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/95 backdrop-blur py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline">سایزها:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۳۸</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۴۰</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۴۲</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-sm">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>تار و پود ژاکارد ابریشمی</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface mr-1">۴.۸</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">مانتوی فیروزه‌ای «ترنج»</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۲,۲۵۰,۰۰۰</span>
+<span class="font-label-sm text-label-sm line-through text-outline">۲,۶۵۰,۰۰۰</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">تومان</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-space-xs rounded-xl font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">keyboard_double_arrow_left</span>
+<span>خرید</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3: پیراهن دست‌دوز گلستان (Limited Edition Badge) -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Editorial modest maxi dress 'Golestan' with hand-embroidered floral neck and cuff accents inspired by Persian miniature paintings, editorial lighting." src="assets/images/placeholder-wide.svg"/>
+<div class="absolute top-3 right-3 flex flex-col gap-1">
+<span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-md shadow-sm">نسخه محدود (۱۰ عدد)</span>
+</div>
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-error flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+<div class="absolute bottom-2 inset-x-2 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/95 backdrop-blur py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline">سایزها:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۳۶</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۳۸</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۴۰</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-sm">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>سوزن‌دوزی تمام دست</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface mr-1">۵.۰</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">پیراهن دست‌دوز «گلستان»</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۲,۷۹۰,۰۰۰</span>
+<span class="font-label-sm text-label-sm text-outline">تومان</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-space-xs rounded-xl font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">keyboard_double_arrow_left</span>
+<span>خرید</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4: شال ابریشمی ماه -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Editorial still life of pure Iranian silk scarf 'Mah' with gold calligraphy poetry printed along the sheer edge, delicately folded on natural marble." src="assets/images/placeholder-wide.svg"/>
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-error flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface hover:text-primary flex items-center justify-center shadow-md transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+<div class="absolute bottom-2 inset-x-2 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/95 backdrop-blur py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline">ابعاد:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">۲۰۰ × ۷۰ سانتی‌متر</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-sm">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>ابریشم طبیعی کاشان</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface mr-1">۴.۹</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">شال ابریشمی «ماه»</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۷۹۰,۰۰۰</span>
+<span class="font-label-sm text-label-sm text-outline">تومان</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-space-xs rounded-xl font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">keyboard_double_arrow_left</span>
+<span>خرید</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CURATED EDITORIAL BANNER (کالکشن فیروزه و ترنج) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto relative rounded-3xl overflow-hidden bg-primary text-on-primary shadow-2xl">
+<!-- Decorative Backdrop Vector / Overlay Pattern -->
+<div class="absolute inset-0 bg-gradient-to-l from-primary via-primary-container to-primary/95"></div>
+<!-- Architectural Filigree SVG motif -->
+<svg class="absolute -bottom-10 -left-10 w-96 h-96 opacity-10 text-on-primary pointer-events-none" fill="currentColor" viewbox="0 0 200 200">
+<path d="M100 0 C120 40 160 80 200 100 C160 120 120 160 100 200 C80 160 40 120 0 100 C40 80 80 40 100 0 Z"></path>
+</svg>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl p-space-xl md:p-space-3xl items-center">
+<div class="lg:col-span-7 space-y-space-md text-right">
+<div class="inline-flex items-center gap-space-xs bg-on-primary/10 backdrop-blur px-space-sm py-space-2xs rounded-full font-label-md text-label-md text-secondary-fixed">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span>روایت کالکشن اختصاصی</span>
+</div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg leading-tight tracking-tight">
+            کالکشن فیروزه و ترنج
+          </h2>
+<blockquote class="font-headline-sm text-headline-sm italic text-tertiary-fixed leading-relaxed border-r-2 pr-space-md border-tertiary-fixed">
+            «حُسنِ مَه‌رویانِ مجلس گرچه دل می‌برد و دین،<br/>
+            بحثِ ما در لطفِ طبع و آنِ دیگر می‌شود.»
+            <footer class="font-label-sm text-label-sm text-secondary-fixed mt-1">— حافظ شیرازی</footer>
+</blockquote>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-primary/90 leading-relaxed text-justify max-w-xl">
+            الهام‌گرفته از تلالو فیروزه‌ای سقف مسجد شیخ لطف‌الله اصفهان و اصالت نقوش شاه‌عباسی. این مجموعه با بهره‌گیری از تکنیک‌های دوزندگی دستی استادان کهن و برش‌های مینیمال معاصر، بازتعریفی از شکوه زن ایرانی است.
+          </p>
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="bg-tertiary-fixed hover:bg-tertiary text-on-tertiary-fixed hover:text-on-tertiary px-space-xl py-space-sm rounded-full font-label-lg text-label-lg shadow-lg transition-all transform hover:-translate-y-0.5" data-path="all-products" href="shop.html">
+              مشاهده دفترچه آثار (لوک‌بوک)
+            </a>
+<div class="flex items-center gap-space-xs text-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span>همراه با شناسنامه رسمی اصالت اثر</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Editorial high fashion photography of model dressed in grand turquoise evening cape with gold arabesque embroidery inside an ornate historic Persian courtyard palace." src="assets/images/placeholder-wide.svg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: BEST SELLERS & SEASONAL LOOKBOOK CAROUSEL -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<div class="flex items-end justify-between">
+<div class="space-y-space-2xs text-right">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">محبوب‌ترین انتخاب‌ها</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">پرفروش‌ترین‌های این فصل</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface shadow-sm flex items-center justify-center transition-colors" id="carousel-prev">
+<span class="material-symbols-outlined">east</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-on-surface shadow-sm flex items-center justify-center transition-colors" id="carousel-next">
+<span class="material-symbols-outlined">west</span>
+</button>
+</div>
+</div>
+<!-- Carousel Container -->
+<div class="flex gap-space-lg overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" id="lookbook-carousel">
+<!-- Item 1 -->
+<div class="snap-start flex-none w-72 sm:w-80 bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Elegant tailored Persian formal mantle in ivory wool and metallic silk brocade lining, photographed in upscale showroom." src="assets/images/placeholder-square.svg"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm px-space-xs py-0.5 rounded text-primary">رتبه ۱ محبوبیت</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface">کت والور «نقش‌جهان»</h4>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface mr-1">۴.۹</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">دوخت صنعتی مزونی با آستر تمام ابریشم</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۲,۱۵۰,۰۰۰ <span class="font-label-sm text-label-sm font-normal text-outline">تومان</span></span>
+<button class="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="snap-start flex-none w-72 sm:w-80 bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Graceful model wearing contemporary loose-cut olive green silk kimono manto with geometric cuffs, luxury boutique setting." src="assets/images/placeholder-square.svg"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm px-space-xs py-0.5 rounded text-primary">شارژ مجدد</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface">عبای زیتونی «نگار»</h4>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface mr-1">۴.۷</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">پارچه الیاف بامبو ضد حساسیت و تنفس‌پذیر</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۱,۹۵۰,۰۰۰ <span class="font-label-sm text-label-sm font-normal text-outline">تومان</span></span>
+<button class="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="snap-start flex-none w-72 sm:w-80 bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Model wearing elegant sand-beige silk organza trench coat with belt and mother-of-pearl accents." src="assets/images/placeholder-square.svg"/>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface">بارانی حریر «روشن»</h4>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface mr-1">۴.۹</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">طراحی سبک ویژه روزهای بهار و پاییز</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۲,۵۰۰,۰۰۰ <span class="font-label-sm text-label-sm font-normal text-outline">تومان</span></span>
+<button class="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="snap-start flex-none w-72 sm:w-80 bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Bespoke Persian hand-embroidered short vest with traditional mirror work and fine silver threads over an ivory linen dress." src="assets/images/placeholder-square.svg"/>
+<span class="absolute top-2 right-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-xs py-0.5 rounded">دست‌دوز انحصاری</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface">جلیقه آینه‌دوزی «شمس»</h4>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface mr-1">۵.۰</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">سوزن‌دوزی هنرمندان بلوچ با ظرافت اعلا</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">۱,۷۸۰,۰۰۰ <span class="font-label-sm text-label-sm font-normal text-outline">تومان</span></span>
+<button class="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: BRAND VALUES & EXCLUSIVE ATELIER SERVICES -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-2xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">تعهد به شایستگی شما</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">چرا بانوان خوش‌پوش ماه‌رخ را برمی‌گزینند؟</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Value 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col text-right space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">ارسال نفیس و رایگان</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-justify">
+            تمامی سفارش‌ها در بسته‌بندی فاخر مزونی همراه با عطر اختصاصی ماه‌رخ به سراسر ایران رایگان ارسال می‌شوند.
+          </p>
+</div>
+<!-- Value 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col text-right space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">۷ روز ضمانت بازگشت</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-justify">
+            آسودگی خاطر شما اولویت ماست؛ در صورت عدم تطابق سایز یا هرگونه تغییر نظر، کالا را بدون قید و شرط تعویض یا مرجوع کنید.
+          </p>
+</div>
+<!-- Value 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col text-right space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">اصالت پارچه و دوخت</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-justify">
+            تضمین کیفیت الیاف طبیعی، تثبیت رنگ منسوجات و دوخت صنعتی با رعایت سخت‌گیرانه‌ترین استانداردهای مزونی ایران.
+          </p>
+</div>
+<!-- Value 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col text-right space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-2xl">styler</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">مشاوره اختصاصی استایل</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed text-justify">
+            پشتیبانان و طراحان مزون به صورت رایگان به شما در انتخاب سایز مناسب، ست کردن و شخصی‌دوزی یاری می‌رسانند.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: TESTIMONIALS & ATELIER INSTAGRAM FEED -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<!-- Testimonials Header -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="space-y-space-2xs text-center md:text-right">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">رضایت شما افتخار ماست</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">دیدگاه همراهان گرانقدر ماه‌رخ</h2>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined">rate_review</span>
+<span>بیش از ۱,۸۰۰ نظر ثبت شده با میانگین رضایت ۹۸٪</span>
+</div>
+</div>
+<!-- Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between text-right">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-justify leading-relaxed">
+              «کیفیت دوخت مانتوی ترنج بسیار فراتر از انتظارم بود. تمیزی چرخ‌کاری داخلی و حس لطافت پارچه فوق‌العاده‌ست. بسته‌بندی و دست‌نوشته همراهش واقعاً حس یک برند اصیل و باوقار رو منتقل می‌کرد.»
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center">
+              ن
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">نسترن افشار</span>
+<span class="font-label-sm text-label-sm text-outline">خریدار مانتوی فیروزه‌ای ترنج • تهران</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between text-right">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-justify leading-relaxed">
+              «پیراهن گلستان رو برای مراسم نامزدی دوستم تهیه کردم. همه در مورد طرح سوزن‌دوزی یقه و تن‌خور شیکش می‌پرسیدند. مشاوره سایز تیم پشتیبانی در واتس‌اپ هم بی‌نهایت دقیق بود.»
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-primary font-headline-sm text-headline-sm flex items-center justify-center">
+              س
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">سارا میرزایی</span>
+<span class="font-label-sm text-label-sm text-outline">خریدار پیراهن گلستان • شیراز</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm space-y-space-sm flex flex-col justify-between text-right">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-justify leading-relaxed">
+              «شال ابریشم ماه لطافت عجیبی داره، اصلاً روی سر لیز نمی‌خوره و برق ملایم ابریشمش بسیار چشم‌نوازه. خوشحالم برندی ایرانی با این استاندارد جهانی فعالیت می‌کنه.»
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-headline-sm flex items-center justify-center">
+              پ
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">پریسا درخشانی</span>
+<span class="font-label-sm text-label-sm text-outline">خریدار شال ابریشمی • اصفهان</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Instagram Atelier Gallery Strip -->
+<div class="space-y-space-md pt-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">photo_camera</span>
+<span class="font-title-lg text-title-lg text-on-surface">در آتلیه ماه‌رخ</span>
+<span class="font-label-sm text-label-sm text-outline dir-ltr">@mahrokh.couture</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">مشاهده اینستاگرام</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md">
+<div class="relative aspect-square rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Behind the scenes in the atelier showing seamstress hands carefully pinning delicate turquoise fabric on a mannequin." src="assets/images/placeholder-square.svg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Persian woman smiling while wearing a modern ivory manto outfit outdoors in front of historic ceramic tile wall." src="assets/images/placeholder-square.svg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Artistic flatlay of gold embroidery threads, silk swatches, measuring tape and handmade brass buttons on wooden table." src="assets/images/placeholder-square.svg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Customer mirror selfie styling the Mahrokh silk scarf and sage manto coat with luxury leather clutch bag." src="assets/images/placeholder-square.svg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: VIP CLUB & NEWSLETTER (باشگاه مشتریان ماه‌رخ) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl">
+<div class="max-w-5xl mx-auto bg-surface-container-high rounded-3xl p-space-xl md:p-space-2xl text-center space-y-space-lg relative overflow-hidden shadow-lg">
+<!-- Ambient decorative glow -->
+<div class="absolute top-0 right-1/2 translate-x-1/2 w-80 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="space-y-space-xs max-w-xl mx-auto">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-on-primary mb-2 shadow-md">
+<span class="material-symbols-outlined text-2xl">card_giftcard</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">به حلقه خاص ماه‌رخ بپیوندید</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          با عضویت در خبرنامه باشگاه، <strong class="text-primary font-semibold">۱۵٪ تخفیف اختصاصی</strong> بر روی اولین خرید خود دریافت نمایید و پیش از دیگران از رونمایی کالکشن‌های فصلی باخبر شوید.
+        </p>
+</div>
+<form class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-space-xs" id="newsletter-form">
+<input class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface focus:outline-none shadow-sm placeholder-outline text-right" id="newsletter-input" placeholder="شماره موبایل یا ایمیل شما..." required="" type="text"/>
+<button class="w-full sm:w-auto whitespace-nowrap bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-xl py-space-sm rounded-full font-label-md text-label-md shadow-md transition-colors" type="submit">
+          دریافت هدیه ورود
+        </button>
+</form>
+<div class="hidden text-primary font-label-md text-label-md animate-fade-in" id="newsletter-success">
+        سپاس از همراهی شما! کد تخفیف اختصاصی برایتان پیامک/ارسال شد.
+      </div>
+<div class="flex items-center justify-center gap-space-md font-label-sm text-label-sm text-outline pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+          حفظ کامل حریم خصوصی
+        </span>
+<span>•</span>
+<span>بدون پیامک‌های مزاحم و تبلیغات اضافه</span>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Carousel & Simple Form Submissions -->
+<script>
+    (function() {
+      // Lookbook horizontal scroll buttons
+      const carousel = document.getElementById('lookbook-carousel');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+
+      if (carousel && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          carousel.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', function() {
+          carousel.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+      }
+
+      // Newsletter interaction
+      const form = document.getElementById('newsletter-form');
+      const success = document.getElementById('newsletter-success');
+      if (form && success) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        });
+      }
+    })();
+  </script>
+</div>
+</main>
+<footer class="w-full bg-surface-container-low pt-space-3xl pb-space-xl mt-space-3xl">
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl">
+    <div class="space-y-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="font-headline-md text-headline-md text-primary">مزون ماه‌رخ</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">ماه‌رخ بازتابی از پیوند اصالت هنر ایرانی و زیبایی‌شناسی معاصر است. طراحی دست‌دوز، منسوجات نفیس ابریشم و الگوهای فاخر معماری، هویتی بی‌بدیل به هر اثر می‌بخشند.</p>
+      <div class="flex items-center gap-space-sm text-primary">
+        <span class="material-symbols-outlined">verified</span>
+        <span class="font-label-md text-label-md">گواهی اصالت دوخت و الیاف طبیعی</span>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">خدمات مشتریان</h4>
+      <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">راهنمای خرید و ارسال</a></li>
+        <li class="hover:text-primary transition-colors"><a href="faq.html">پرسش‌های متداول</a></li>
+        <li class="hover:text-primary transition-colors"><a href="shipping-returns.html">شرایط تعویض و بازگشت کالا</a></li>
+        <li class="hover:text-primary transition-colors"><a href="account/orders.html">پیگیری سفارش و مرسوله</a></li>
+        <li class="hover:text-primary transition-colors"><a href="contact.html">خدمات شخصی‌دوزی ویژه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="size-guide.html">راهنمای سایز</a></li>
+        <li class="hover:text-primary transition-colors"><a href="order-tracking.html">رهگیری سفارش (بدون ورود)</a></li>
+        <li class="hover:text-primary transition-colors"><a href="gift-cards.html">کارت هدیه</a></li>
+        <li class="hover:text-primary transition-colors"><a href="brands.html">برندهای همکار</a></li>
+        <li class="hover:text-primary transition-colors"><a href="become-vendor.html">فروشنده ماه‌رخ شوید</a></li>
+      </ul>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">شوروم و ارتباط مستقیم</h4>
+      <div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+        <div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary mt-1">location_on</span><span>تهران، زعفرانیه، خیابان آصف، پلاک ۴۴، عمارت ماه‌رخ</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">call</span><span dir="ltr">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">mail</span><span>atelier@mahrokh.ir</span></div>
+        <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">schedule</span><span>شنبه تا پنجشنبه: ۱۰:۰۰ الی ۲۱:۰۰ (با هماهنگی قبلی)</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm pt-space-xs">
+        <a href="#" aria-label="اینستاگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+        <a href="#" aria-label="تلگرام" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">send</span></a>
+        <a href="#" aria-label="واتس‌اپ" class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-lg">chat</span></a>
+      </div>
+    </div>
+    <div class="space-y-space-md">
+      <h4 class="font-title-lg text-title-lg text-on-surface">باشگاه مشتریان ماه‌رخ</h4>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">عضویت در خبرنامه باشگاه مشتریان ماه‌رخ جهت دریافت تخفیف‌های ویژه و دسترسی اختصاصی به مجموعه‌های نو</p>
+      <form class="flex flex-col gap-space-xs" data-api-form="submissions" data-reset="true"><input type="hidden" name="type" value="newsletter">
+        <input name="contact" required class="w-full bg-surface-container-lowest px-space-md py-space-xs rounded-lg font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none" placeholder="شماره تماس یا ایمیل شما..." type="email"/>
+        <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-space-xs rounded-lg transition-colors shadow-card">عضویت در حلقه اختصاصی</button>
+      <div data-form-feedback class="hidden text-secondary text-sm rounded-lg px-3 py-2"></div></form>
+      <div class="flex items-center gap-space-md pt-space-xs">
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">verified_user</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-tertiary text-2xl">workspace_premium</span></div>
+        <div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center p-space-xs shadow-card"><span class="material-symbols-outlined text-primary text-2xl">lock</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop mt-space-2xl pt-space-md border-t border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant text-center md:text-right">
+    <span>تمامی حقوق مادی و معنوی برای مزون پوشاک ماه‌رخ محفوظ است © ۱۴۰۳</span>
+    <div class="flex items-center gap-space-md">
+      <a class="hover:text-primary transition-colors" href="login.html">ورود</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="register.html">ثبت‌نام</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="privacy.html">حریم خصوصی</a>
+      <span>•</span>
+      <a class="hover:text-primary transition-colors" href="terms.html">قوانین و مقررات</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/currency-formatter.js"></script>
+<script src="js/core/cart-service.js"></script>
+<script src="js/core/wishlist-service.js"></script>
+<script src="js/core/permission-service.js"></script>
+<script src="js/ui/nav-highlighter.js"></script>
+<script src="js/ui/accordion.js"></script>
+<script src="js/ui/tabs.js"></script>
+<script src="js/ui/quantity-stepper.js"></script>
+<script src="js/ui/form-handler.js"></script>
+<script src="js/ui/badge-updater.js"></script>
+<script src="js/ui/product-actions.js"></script>
+<script src="js/ui/cart-page-renderer.js"></script>
+<script src="js/ui/permission-gate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth-ui.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/live-products.js"></script>
+</body>
+</html>
